@@ -31,7 +31,7 @@ const unsigned int outputSignalWidth  = inputSignalWidth - maskWidth + 1;
 const unsigned int outputSignalHeight = inputSignalHeight - maskHeight + 1;
 
 //输出矩阵值
-cl_float outputSignal[outputSignalWidth][outputSignalHeight];
+cl_int outputSignal[outputSignalWidth][outputSignalHeight];
  /*
   1 选择平台创建OpenCL上下文
   2 选择设备创建命令队列

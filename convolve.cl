@@ -1,6 +1,6 @@
 __kernel void convolve(const __global uint *const input,
                        __constant uint* const mask,
-                       __global float *const output,
+                       __global uint *const output,
                        const int inputWidth,
                        const int maskWidth){
     const int x=get_global_id(0);

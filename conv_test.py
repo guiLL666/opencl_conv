@@ -20,4 +20,14 @@ kernel_180 = np.flip(kernel_90,axis = 1)
 # 使用scipy.signal.convolve2d函数进行卷积操作
 y = scipy.signal.convolve2d(array, kernel_180, mode='valid')
 
-print(y)
+with open('result.txt', 'r') as file:
+    lines = file.readlines()
+    result = [list(map(int, line.strip().split(','))) for line in lines]
+
+
+if np.array_equal(y, result):
+    print("卷积结果正确")
+else:
+    print("卷积结果错误")
+
+#print(y)
